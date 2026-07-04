@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio Siino: Web as a Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav>
+    <div class="nav-inner">
+        <span class="nav-logo" onclick="go('startseite')">Antonio Siino <em>/ Web</em></span>
+        <ul class="nav-links" id="desktopNav">
+            <li><a id="nl-startseite"  onclick="go('startseite')"  class="active">Startseite</a></li>
+            <li><a id="nl-preise"      onclick="go('preise')">Preise</a></li>
+            <li><a id="nl-ueber-mich"  onclick="go('ueber-mich')">Über mich</a></li>
+            <li><a id="nl-kontakt"     onclick="go('kontakt')">Kontakt</a></li>
+            <li><a id="nl-impressum"   onclick="go('impressum')">Impressum</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+    <a onclick="go('startseite');closeMenu()"  id="ml-startseite"  class="active">Startseite</a>
+    <a onclick="go('preise');closeMenu()"      id="ml-preise">Preise</a>
+    <a onclick="go('ueber-mich');closeMenu()"  id="ml-ueber-mich">Über mich</a>
+    <a onclick="go('kontakt');closeMenu()"     id="ml-kontakt">Kontakt</a>
+    <a onclick="go('impressum');closeMenu()"   id="ml-impressum">Impressum</a>
+</div>
+
+
+<!-- ═══ STARTSEITE ═══ -->
+<section id="startseite" class="active">
+    <div class="container">
+        <div class="hero">
+            <p class="eyebrow">Web as a Service &nbsp;·&nbsp; Kanton Aargau &nbsp;·&nbsp; Schweiz</p>
+            <h1 class="hero-title">Ihre Website.<br>Mein Fullservice.</h1>
+            <p class="hero-sub">Professionelle Webpräsenz als monatlicher Fixservice, vollständig betreut, technisch wartungsfrei und auf Ihr Unternehmen zugeschnitten. Kein Aufwand für Sie.</p>
+            <div class="cta-row">
+                <button class="btn btn-dark" onclick="go('preise')">Preise ansehen</button>
+                <button class="btn btn-ghost" onclick="go('kontakt')">Kontakt aufnehmen &rarr;</button>
+            </div>
+            <div class="stats">
+                <div>
+                    <p class="stat-label">Modell</p>
+                    <p class="stat-value">WaaS</p>
+                    <p class="stat-desc">Monatlich kalkulierbar, ohne Überraschungskosten</p>
+                </div>
+                <div>
+                    <p class="stat-label">Inklusive</p>
+                    <p class="stat-value">Hosting & Updates</p>
+                    <p class="stat-desc">Technischer Betrieb vollständig übernommen</p>
+                </div>
+                <div>
+                    <p class="stat-label">Standort</p>
+                    <p class="stat-value">Aargau, CH</p>
+                    <p class="stat-desc">Persönlich, lokal, direkt erreichbar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══ PREISE ═══ -->
+<section id="preise">
+    <div class="container">
+        <div class="pricing-header">
+            <p class="section-label">Transparente Konditionen</p>
+            <h2 class="section-title">Klare Preise.<br>Keine Überraschungen.</h2>
+            <p class="section-sub">Wählen Sie das Modell, das zu Ihrem Unternehmen passt, vom monatlichen Fullservice bis zur eigenen Website ohne Laufzeit.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+            <!-- Starter -->
+            <div class="card">
+                <span class="badge">Starter</span>
+                <p class="card-name">WaaS Starter</p>
+                <p class="card-price">CHF 150</p>
+                <p class="card-period">pro Monat</p>
+                <p class="card-setup">Setup: CHF 100 einmalig</p>
+                <ul class="features">
+                    <li>Bis 3 Seiten</li>
+                    <li>Kontaktformular</li>
+                    <li>WhatsApp-Button</li>
+                    <li>Hosting inklusive</li>
+                    <li>Updates inklusive</li>
+                    <li>12 Monate Mindestlaufzeit</li>
+                    <li>1 Monat Kündigungsfrist</li>
+                </ul>
+                <button class="btn btn-dark" onclick="go('kontakt')">Jetzt anfragen</button>
+            </div>
+
+            <!-- Pro -->
+            <div class="card featured">
+                <span class="badge">Empfohlen</span>
+                <p class="card-name">WaaS Pro</p>
+                <p class="card-price">CHF 190</p>
+                <p class="card-period">pro Monat</p>
+                <p class="card-setup">Setup: CHF 200 einmalig</p>
+                <ul class="features">
+                    <li>Bis 6 Seiten</li>
+                    <li>Kontaktformular</li>
+                    <li>WhatsApp-Button</li>
+                    <li>Hosting inklusive</li>
+                    <li>Updates inklusive</li>
+                    <li>Buchungssystem</li>
+                    <li>Foto-Galerie</li>
+                    <li>12 Monate Mindestlaufzeit</li>
+                    <li>1 Monat Kündigungsfrist</li>
+                </ul>
+                <button class="btn btn-dark" onclick="go('kontakt')">Jetzt anfragen</button>
+            </div>
+
+            <!-- Clean Handoff -->
+            <div class="card">
+                <span class="badge">Einmalig</span>
+                <p class="card-name">Clean Handoff</p>
+                <p class="card-price small">ab CHF 1'500</p>
+                <p class="card-period">einmalige Zahlung</p>
+                <p class="card-setup">Wartung: CHF 40 / Mo optional</p>
+                <ul class="features">
+                    <li>Bis 6 Seiten</li>
+                    <li>Kontaktformular</li>
+                    <li>WhatsApp-Button</li>
+                    <li>Buchungssystem</li>
+                    <li>Foto-Galerie</li>
+                    <li>Website gehört Ihnen</li>
+                    <li>Domain &amp; Dateien übertragen</li>
+                    <li>Keine Mindestlaufzeit</li>
+                    <li>50% Anzahlung vor Beginn</li>
+                </ul>
+                <button class="btn btn-dark" onclick="go('kontakt')">Jetzt anfragen</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══ ÜBER MICH ═══ -->
+<section id="ueber-mich">
+    <div class="container">
+        <div class="about-grid">
+
+            <div class="about-img-wrap">
+                <img
+                    src="images/profile.jpg"
+                    alt="Antonio Siino"
+                    onerror="this.style.display='none';document.getElementById('img-fallback').style.display='flex';"
+                >
+                <div class="about-img-placeholder" id="img-fallback" style="display:none;">Foto folgt</div>
+            </div>
+
+            <div class="about-content">
+                <p class="section-label">Über mich</p>
+                <h2 class="about-name">Antonio<br>Siino</h2>
+                <p class="about-role">Informatik-Mittelschüler &nbsp;·&nbsp; Baden &nbsp;·&nbsp; Freelance Webentwickler &nbsp;·&nbsp; Kanton Aargau</p>
+
+                <p class="about-bio">Was mich von einer Agentur unterscheidet? Ich bin eine Person: kein Team mit Ticketsystem. Ihre Anfrage landet direkt bei mir, die Umsetzung beginnt ohne Umweg, und Sie sprechen immer mit demjenigen, der Ihre Website tatsächlich baut.</p>
+
+                <p class="about-bio">Als Informatik-Mittelschüler in Baden lebe ich täglich mit Technologie, nicht nur im Unterricht, sondern in jedem Projekt, das ich eigenständig konzipiere und umsetze. Mein Ansatz: sauber programmiert, schnell geladen, keine Vorlagen.</p>
+
+                <p class="about-bio">Webentwicklung ist für mich mehr als Code: es ist die Fähigkeit, einem Unternehmen eine digitale Identität zu geben, die überzeugend wirkt und messbar funktioniert. Lokale KMU aus dem Kanton Aargau profitieren dabei von kurzen Wegen und einem Ansprechpartner, den sie kennen.</p>
+
+                <div class="tags">
+                    <span class="tag">HTML &amp; CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Web as a Service</span>
+                    <span class="tag">Kanton Aargau</span>
+                    <span class="tag">Freelance</span>
+                    <span class="tag">KMU-fokussiert</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══ KONTAKT ═══ -->
+<section id="kontakt">
+    <div class="container">
+        <div class="contact-wrap">
+            <p class="section-label">Kontakt</p>
+            <h2 class="section-title">Bereit anzufangen?</h2>
+
+            <div class="contact-grid">
+                <div>
+                    <p class="contact-intro">Sprechen wir.</p>
+                    <p class="contact-desc">Sie haben ein Projekt im Kopf oder möchten einfach wissen, was für Ihr Unternehmen sinnvoll wäre? Ich höre zu: direkt, unkompliziert und ohne Agenturstruktur.</p>
+
+                    <div class="contact-item">
+                        <p class="ci-label">E-Mail</p>
+                        <a class="ci-value" href="mailto:antoniosiino@outlook.com">antoniosiino@outlook.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <p class="ci-label">Telefon</p>
+                        <a class="ci-value" href="tel:+41765879378">+41 76 587 93 78</a>
+                    </div>
+                    <div class="contact-item">
+                        <p class="ci-label">Standort</p>
+                        <span class="ci-value">Kanton Aargau, Schweiz</span>
+                    </div>
+                </div>
+
+                <form class="form" onsubmit="handleForm(event)">
+                    <div class="fg">
+                        <label class="flabel">Name</label>
+                        <input class="finput" type="text" name="name" placeholder="Ihr vollständiger Name" required>
+                    </div>
+                    <div class="fg">
+                        <label class="flabel">E-Mail</label>
+                        <input class="finput" type="email" name="email" placeholder="ihre@email.ch" required>
+                    </div>
+                    <div class="fg">
+                        <label class="flabel">Nachricht</label>
+                        <textarea class="finput" name="message" placeholder="Beschreiben Sie Ihr Vorhaben..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Nachricht senden</button>
+                    <p id="form-msg" style="font-size:13px;color:var(--gray-600);display:none;margin-top:4px;"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══ IMPRESSUM ═══ -->
+<section id="impressum">
+    <div class="container">
+        <div class="impressum-wrap">
+            <p class="section-label">Rechtliches</p>
+            <h2 class="section-title" style="margin-bottom:56px;">Impressum</h2>
+
+            <div class="impr-block">
+                <p class="impr-label">Betreiber</p>
+                <p>Antonio Siino<br>Traubenweg 67<br>5313 Klingnau<br>Schweiz</p>
+            </div>
+            <div class="impr-block">
+                <p class="impr-label">Kontakt</p>
+                <p>
+                    E-Mail: <a href="mailto:antoniosiino@outlook.com">antoniosiino@outlook.com</a><br>
+                    Telefon: <a href="tel:+41765879378">+41 76 587 93 78</a>
+                </p>
+            </div>
+            <div class="impr-block">
+                <p class="impr-label">Haftungsausschluss</p>
+                <p>Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Haftung übernommen werden. Als Diensteanbieter bin ich gemäss geltendem Recht für eigene Inhalte verantwortlich.</p>
+            </div>
+            <div class="impr-block">
+                <p class="impr-label">Urheberrecht</p>
+                <p>Die auf dieser Website veröffentlichten Inhalte und Werke unterliegen dem Schweizer Urheberrecht. Jede Art der Vervielfältigung oder Verwendung bedarf der schriftlichen Genehmigung des Betreibers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+    <div class="footer-inner">
+        <p class="footer-copy" id="footer-copy"></p>
+        <div class="footer-links">
+            <a onclick="go('impressum')">Impressum</a>
+            <a onclick="go('kontakt')">Kontakt</a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
