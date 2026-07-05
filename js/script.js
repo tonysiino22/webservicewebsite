@@ -39,7 +39,7 @@ function handleForm(e) {
         'E-Mail: ' + data.get('email') + '\n\n' +
         data.get('message')
     );
-    window.location.href = 'mailto:antoniosiino@outlook.com?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:info@siinoweb.com?subject=' + subject + '&body=' + body;
     msg.textContent = 'Ihr E-Mail-Programm wird geöffnet…';
     msg.style.display = 'block';
 }
